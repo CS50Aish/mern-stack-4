@@ -71,6 +71,18 @@ server.on("request", (req, res) => {
         })
         return res.end();
     }
+
+    if(url === '/parserequest'){
+        const query = url.parse(req.url).query;
+        const queryObj = query.split("&").reduce((prev, next) => {
+            let [key, value] = next.split("=");
+            return {...prev, [key]:value}
+        }, {});
+
+        res.statusCode = 200;
+        res.setHeader("Content-Type", "application/json");
+        return res.end(JSON.stringify(queryObj));
+    }
     
 });
 
