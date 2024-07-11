@@ -12,11 +12,11 @@ server.on("request", (req, res) => {
     res.write('<html>');
     res.write('<body>');
     res.write('<h2>');
-    res.write('This is and HTML Response');
+    res.write('This is an HTML Response');
     res.write('</h2>');
     res.write('</body>');
     res.write('</html>');
-    res.end("Hey there response");
+    res.end();
 });
 
 server.listen(SERVER_PORT, SERVER_HOSTNAME, () => {
