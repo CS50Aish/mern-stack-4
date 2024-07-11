@@ -71,3 +71,6 @@ labuser@ubuntu2204:~/Desktop/mern-stack-4/node$ cat package.json
     "http": "^0.0.1-security"
   }
 }
+
+labuser@ubuntu2204:~/Desktop/mern-stack-4/node$ node index.js
+Server is up and running on host 127.0.0.1 and listening on port 3000
