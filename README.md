@@ -47,3 +47,27 @@ npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.2
 npm notice Run npm install -g npm@10.8.2 to update!
 npm notice 
 
+labuser@ubuntu2204:~/Desktop/mern-stack-4/node$ touch index.js
+labuser@ubuntu2204:~/Desktop/mern-stack-4/node$ ls
+index.js  package.json
+labuser@ubuntu2204:~/Desktop/mern-stack-4/node$ npm install http
+
+added 1 package, and audited 2 packages in 2s
+
+found 0 vulnerabilities
+
+labuser@ubuntu2204:~/Desktop/mern-stack-4/node$ cat package.json
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Node Projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aishwarya",
+  "license": "ISC",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}
