@@ -7,16 +7,30 @@ const server = http.createServer();
 server.on("listening", () => console.log("Server Listening"));
 server.on("error", () => console.log("Error while handling request"));
 
+// server.on("request", (req, res) => {
+//     res.setHeader("Content-Type", "text/plain");
+//     res.end("Hey there response");
+// });
+
+// server.on("request", (req, res) => {
+//     res.setHeader("Content-Type", "text/html");
+//     res.write('<html>');
+//     res.write('<body>');
+//     res.write('<h2>');
+//     res.write('This is an HTML Response');
+//     res.write('</h2>');
+//     res.write('</body>');
+//     res.write('</html>');
+//     res.end();
+// });
+
 server.on("request", (req, res) => {
-    res.setHeader("Content-Type", "text/html");
-    res.write('<html>');
-    res.write('<body>');
-    res.write('<h2>');
-    res.write('This is an HTML Response');
-    res.write('</h2>');
-    res.write('</body>');
-    res.write('</html>');
-    res.end();
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({
+        "platform": process.platform,
+        "date": new Date(),
+        "message": "Hellos"
+    }));
 });
 
 server.listen(SERVER_PORT, SERVER_HOSTNAME, () => {
