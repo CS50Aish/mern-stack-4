@@ -25,11 +25,20 @@ server.on("error", () => console.log("Error while handling request"));
 // });
 
 server.on("request", (req, res) => {
+    // Accessing request headers of incoming requests
+    const{ headers } = req;
+
+    // Getting user-agent value from request header
+    const userAgent = headers['user-agent'];
+
+    // Setting the response header
     res.setHeader("Content-Type", "application/json");
+    res.setHeader('Date', new Date());
     res.end(JSON.stringify({
-        "platform": process.platform,
-        "date": new Date(),
-        "message": "Hellos"
+        "Platform": process.platform,
+        "UserAgent": userAgent,
+        "Date": new Date(),
+        "Message": "Hellos"
     }));
 });
 
