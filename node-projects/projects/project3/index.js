@@ -63,6 +63,14 @@ server.on("request", (req, res) => {
         res.write('</html>');
         res.end();
     }
+
+    if(url === '/api'){
+        // Redirect
+        res.writeHead(302, {
+            location: '/textcontent'
+        })
+        return res.end();
+    }
     
 });
 
