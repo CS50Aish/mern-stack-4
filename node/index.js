@@ -4,9 +4,9 @@ const SERVER_PORT = 3000;
 const SERVER_HOSTNAME = "127.0.0.1";
 
 const server = http.createServer((req, res) => {
-    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Content-Type", "text/html");
     res.writeHead(200);
-    res.end('{"quote": "Search the candle rather than cursing the darkness"}');
+    res.end('<html><body><h3>Search the candle rather than cursing the darkness</h3></body></html>');
 });
 
 server.listen(SERVER_PORT, SERVER_HOSTNAME, () =>{
