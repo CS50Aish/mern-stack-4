@@ -8,7 +8,14 @@ server.on("listening", () => console.log("Server Listening"));
 server.on("error", () => console.log("Error while handling request"));
 
 server.on("request", (req, res) => {
-    res.setHeader("Content-Type", "text/plain");
+    res.setHeader("Content-Type", "text/html");
+    res.write('<html>');
+    res.write('<body>');
+    res.write('<h2>');
+    res.write('This is and HTML Response');
+    res.write('</h2>');
+    res.write('</body>');
+    res.write('</html>');
     res.end("Hey there response");
 });
 
