@@ -74,3 +74,30 @@ labuser@ubuntu2204:~/Desktop/mern-stack-4/node$ cat package.json
 
 labuser@ubuntu2204:~/Desktop/mern-stack-4/node$ node index.js
 Server is up and running on host 127.0.0.1 and listening on port 3000
+
+labuser@ubuntu2204:~/Desktop/mern-stack-4/node-projects/projects$ cd project2
+labuser@ubuntu2204:~/Desktop/mern-stack-4/node-projects/projects/project2$ npm init -y
+Wrote to /home/labuser/Desktop/mern-stack-4/node-projects/projects/project2/package.json:
+
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+labuser@ubuntu2204:~/Desktop/mern-stack-4/node-projects/projects/project2$ npm install express
+
+added 64 packages, and audited 65 packages in 4s
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
