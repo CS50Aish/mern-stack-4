@@ -73,8 +73,12 @@ server.on("request", (req, res) => {
         return res.end();
     }
 
-    if(url === '/parserequest'){
-        const query = url.parse(req.url).query;
+    const pathname = url.parse(url).pathname;
+
+    if(pathname === '/parserequest'){
+        const query = url.parse(url).query;
+        console.log(`URI => ${url}`);
+        console.log(`Query => ${query}`);
         const queryObj = query.split("&").reduce((prev, next) => {
             let [key, value] = next.split("=");
             return {...prev, [key]:value}
